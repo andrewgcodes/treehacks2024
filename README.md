@@ -11,8 +11,14 @@ We trained our 40M parameter LLM using modified [nanogpt implementation](https:/
 We didn't have time to figure out how to deploy the LLM so we went with our fine-tuned Mistral-7b model (which also performed better).
 
 ## Fine-tuning:
-We LORA fine-tuned Mistral-7b using MonsterAPI's online platform: MonsterAPI.ai
-Thank you to the team for giving us free credits!
+We LORA fine-tuned Mistral-7b using MonsterAPI's online platform: MonsterAPI.ai. (Thank you to the team for giving us free credits!)
+Settings: one epoch, Lora R = 8, Lora Alpha = 16, Dropout = 0, Bias = none, Gradient accumulation steps = 32, Lr = 0.0002, warmup steps = 100
+
+Before fine-tuning, we prepared 250k recipes we got from online into a standard instruct format using this script: prepareRecipesForFinetuning.py
+The format is:
+You are an expert chef. You know about a lot of diverse cuisines. You write helpful tasty recipes.\n\n###Instruction: please think step by step and generate a detailed recipe for {prompt}\n\n###Response:{completion}
+
+We also lowercased all prompts and completions.
 We experimented with fine-tuning using 10k, 50k, and 250k recipes.
 We observed that using more data led to lower loss, but at diminishing returns.
 We deployed our fine-tuned Mistral-7b (250k examples) using MonsterAPI.ai
