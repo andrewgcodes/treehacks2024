@@ -4,6 +4,7 @@ TreeHacks 2024 project.
 ![VisionMama Photo](https://github.com/andrewgcodes/treehacks2024/blob/main/visionmama-photo.png?raw=true)
 
 ## Vision OS App
+In the visionmama.zip file, please download and extract
 
 ## AI Agent Pipeline for Recipe Generation, Food Search, and Instacart Ordering
 We built an endpoint that we hit from our Vision Pro and our Reflex site.
