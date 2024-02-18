@@ -3,6 +3,11 @@ TreeHacks 2024 project.
 **Scroll down** for details.
 ![VisionMama Photo](https://github.com/andrewgcodes/treehacks2024/blob/main/visionmama-photo.png?raw=true)
 
+## Vision OS App
+
+## AI Agent Pipeline for Recipe Generation, Food Search, and Instacart Ordering
+We built an endpoint that we hit from our Vision Pro and our Reflex site.
+Basically what happens is we submit a user's desired food such as "banana soup". We pass that to our fine-tuned Mistral-7b LLM to generate a recipe. Then, we quickly use GPT-4-turbo to parse the recipe and extract the ingredients. Then we use the SERP API on each ingredient to find where it can be purchased nearby. We prioritize cheaper ingredients and use an algorithm to try to visit the least number of stores to buy all ingredients. Finally, we populate an Instacart Order API call to purchase the ingredients (simulated for now since we do not have actual partner access to Instacart's API)
 
 ## Pre-training:
 We found a dataset online of 250,000 recipes. We preprocessed them and split and tokenized them for pretraining.
