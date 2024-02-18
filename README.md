@@ -3,6 +3,16 @@ TreeHacks 2024 project.
 **Scroll down** for details.
 ![VisionMama Photo](https://github.com/andrewgcodes/treehacks2024/blob/main/visionmama-photo.png?raw=true)
 
+## Table of contents
+| Section | Description |
+|---------|-------------|
+| [**Vision OS App**](#vision-os-app) | Instructions for downloading and extracting the visionmama.zip file for the Vision OS App. |
+| [**AI Agent Pipeline for Recipe Generation, Food Search, and Instacart Ordering**](#ai-agent-pipeline-for-recipe-generation-food-search-and-instacart-ordering) | Details on the pipeline from a user's food request to generating a recipe, identifying ingredients, finding purchase locations, and creating an Instacart order. Utilizes a fine-tuned Mistral-7b LLM, GPT-4-turbo, SERP API, and a sophisticated ranking algorithm. |
+| [**Pre-training**](#pre-training) | Information on dataset preparation, pre-training process, and decision-making regarding the use of a fine-tuned Mistral-7b model. |
+| [**Fine-tuning**](#fine-tuning) | Describes LORA fine-tuning of Mistral-7b with 250k recipes, settings used, and dataset size impact on performance. |
+| [**Reflex.dev Web Chat Agent**](#reflexdev-web-chat-agent) | Using Reflex.dev to create a chat interface for interacting with the AI agent, including triggers for recipe generation and ingredient identification. |
+| [**InterSystems IRIS Vector Database for Semantic Recipe Discovery**](#intersystems-iris-vector-database-for-semantic-recipe-discovery) | Use of the IRIS Vector Database for recipe embeddings and semantic searches based on user "vibe" inputs. |
+
 ## Vision OS App
 In the visionmama.zip file, please download and extract
 
